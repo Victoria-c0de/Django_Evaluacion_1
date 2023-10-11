@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .justificado {
+            text-align: justify;
+        }
+
+        .producto img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+    </style>
+</head>
+
+<body class="container mt-5">
+    <div class="alert alert-info display-1 text-center">
+        <img src="{% static 'img/logo.jpg'%}" width="140"> DJANGO SHOP
+    </div>
+    <div class="alert alert-dark display-3">
+        <h2>{{titulo}}</h2>
+    </div>
+    <div class="row">
+        <div class="col"><a href="/categoria/computacion/" class="btn btn-dark">Computación</a></div>
+        <div class="col"><a href="/categoria/consolas/" class="btn btn-dark">Consolas</a></div>
+        <div class="col"><a href="/categoria/videojuegos/" class="btn btn-dark">Videojuegos</a>
+        </div>
+
+    </div>
+    <div>
+        <p>Explora nuestros productos.</p>
+    </div>
+
+    <main>
+        <section class="productos row">
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto1 }}" alt="Computación 1" width="140">
+
+                    <h2>DISCO ADATA DE ESTADO SOLIDO 240GB SSD 2.5" ULTIMATE </h2>
+                    <p class="justificado">El SSD ADATA Ultimate SU650 ofrece almacenamiento de alta velocidad y
+                        estabilidad para una mejor
+                        experiencia de usuario..</p>
+                    <strong> Precio:$17.000</strong>
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto2 }}" alt="Computación 2" width="140">
+                    <h2>DISCO EXTERNO SSD 1TB ADATA XPG USB 3.2 GEN2X2 RGB P/N</h2>
+                    <p class="justificado"> Ofrece una excelente facilidad de uso con hasta 2000 MB/s de
+                        lectura/escritura.</p>
+                    <strong> Precio:$79.900</strong>
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto3 }}" alt="Computación 3" width="140">
+                    <h2>COFRE 2.5 ADATA XPG USB 3.2 GEN1 EX500 RED P/N AEX500U3-CRD</h2>
+                    <p class="justificado">Basta de carcasas aburridas. Convierte cualquier SSD o HDD de 2,5” en
+                        almacenamiento extra para
+                        juegos con un diseño que sobresale del resto.</p>
+                    <strong> Precio:$9.900</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    <a href="/" class="btn btn-dark">Volver</a>
+
+
+
+</body>
+
+</html>

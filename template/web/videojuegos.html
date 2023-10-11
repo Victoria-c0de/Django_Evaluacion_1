@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .justificado {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="container mt-5">
+    <div class="alert alert-info display-1 text-center">
+        <img src="{% static 'img/logo.jpg'%}" width="140"> DJANGO SHOP
+    </div>
+    <div class="alert alert-dark display-3">
+        <h2>{{titulo}}</h2>
+    </div>
+    <div class="row">
+        <div class="col"><a href="/categoria/computacion/" class="btn btn-dark">Computación</a></div>
+        <div class="col"><a href="/categoria/consolas/" class="btn btn-dark">Consolas</a></div>
+        <div class="col"><a href="/categoria/videojuegos/" class="btn btn-dark">Videojuegos</a>
+        </div>
+
+    </div>
+    <div>
+        <p>Explora nuestros productos.</p>
+    </div>
+
+    <main>
+        <section class="productos row">
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto1 }}" alt="producto 1" width="300">
+                    <h2>Death or Threat PS5 </h2>
+                    <p class="justificado">"Death or Treat" es un juego de acción roguelite y hack 'n' slash en 2D, con
+                        entornos dibujados a
+                        mano y animación tradicional. Explora todos los mundos y emplea distintas armas y habilidades
+                        para derrotar a las hordas de enemigos.</p>
+                    <strong>Precio: $39.990</strong>
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto2 }}" alt="producto 2" width="300">
+                    <h2>Assassin's Creed Mirage</h2>
+                    <p class="justificado">En Assassin's Creed Mirage, encarnarás a Basim, un astuto ladrón callejero
+                        con visiones de
+                        pesadilla buscando respuestas y justicia. Únete a una organización ancestral y logra comprender
+                        un nuevo Credo que cambiará</p>
+                    <strong>Precio $59.990</strong>
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto3 }}" alt="producto 3" width="300">
+                    <h2>Super Mario RPG NSW </h2>
+                    <p class="justificado">Mario, Bowser y Peach unen fuerzas para reparar la Vía Estelar, un camino que
+                        cumple deseos, en
+                        este ameno juego de rol
+                        Forma equipo con un grupo inusual de héroes para reparar la Vía Estelar y detener a la revoltosa
+                        Banda de Fraguo. </p>
+                    <strong>Precio $59.990</strong>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    <a href="/" class="btn btn-dark">Volver </a>
+
+
+</body>
+
+</html>

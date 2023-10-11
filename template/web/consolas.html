@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .justificado {
+            text-align: justify;
+        }
+
+        .producto img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="container mt-5">
+    <div class="alert alert-info display-1 text-center">
+        <img src="{% static 'img/logo.jpg'%}" width="140"> DJANGO SHOP
+
+    </div>
+    <div class="alert alert-dark display-3">
+        <h2>{{titulo}}</h2>
+    </div>
+    <div class="row">
+        <div class="col"><a href="/categoria/computacion/" class="btn btn-dark">Computación</a></div>
+        <div class="col"><a href="/categoria/consolas/" class="btn btn-dark">Consolas</a></div>
+        <div class="col"><a href="/categoria/videojuegos/" class="btn btn-dark">Videojuegos</a>
+        </div>
+
+    </div>
+    <div>
+        <p>Explora nuestros productos.</p>
+    </div>
+
+    <main>
+        <section class="productos row">
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto1 }}">
+                    <h2>Consola Xbox Series S Modelo Blanco</h2>
+                    <p class="justificado">La nueva generación de videojuegos ofrece nuestra biblioteca de lanzamientos
+                        digitales más grande
+                        a la Xbox más pequeña de la historia. Con mundos más dinámicos, tiempos de carga más rápidos y
+                        la adición de Xbox Game Pass .</p>
+                    <strong>Precio: $249.990</strong> Normal: $349.990
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto2 }}">
+                    <h2>Consola Nintendo Switch Modelo OLED Blanco </h2>
+                    <p class="justificado">Con Nintendo Switch (modelo OLED), podrás disfrutar de tus juegos
+                        favoritos donde y cuando quieras! Cuenta con una pantalla OLED de 7 pulgadas con colores
+                        intensos.</p>
+                    <strong>Precio: $339.990</strong> Normal: $479.990
+                </div>
+            </div>
+            <div class="col">
+                <div class="producto">
+                    <img src="{% static 'img/' %}{{ foto3 }}" alt="Computación 1">
+                    <h2>Consola Nintendo Switch Neon Blue Red Caja Roja </h2>
+                    <p class="justificado">La consola Nintendo Switch está diseña para acompañarte dondequiera que
+                        vayas, transformándose de
+                        consola para el hogar a consola portátil en un instante.
+                    </p>
+                    <strong>Precio: $279.990</strong> Normal: $399.990
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <a href="/" class="btn btn-dark">Volver</a>
+
+
+</body>
+
+</html>
